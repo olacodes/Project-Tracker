@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+css: ['bootstrap/dist/css/bootstrap.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -39,8 +39,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
