@@ -1,4 +1,6 @@
 <template>
+  <div class="container">
+
   <div class="card-container card mt-5 shadow">
     <div class="login-header text-center p-3">
         <h2 class="login-text">Sign up for Project Manager</h2>
@@ -47,6 +49,8 @@
       </div>
       <button class="btn btn-primary mx-5 mb-5">Sign up with Facbook</button>
   </div>
+  </div>
+
 </template>
 
 <script>
