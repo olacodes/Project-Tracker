@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar navbar-expand-lg navbar-light bg-light mb-5 shadow-lg position-sticky fixed-top"
+    class="navbar shadow-lg position-sticky fixed-top d-flex"
   >
     <router-link class="navbar-brand link" to="/">
       <img
@@ -10,34 +10,17 @@
       />
       Manager
     </router-link>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
+    <div class="login-register d-flex justify-content-between">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <router-link class="nav-link" to="/"
-            >Home <span class="sr-only">(current)</span></router-link
-          >
-        </li>
-      </ul>
-
-      <router-link class="nav-link btn btn-outline-info my-2 my-sm-0 mr-3" to="/login"
+      <router-link class="nav-link btn btn-sm md-btn-lg  my-2 my-sm-0 " to="/login"
         >Login</router-link
       >
-      <router-link class="nav-link btn btn-outline-info my-2 my-sm-0" to="/register"
+      <router-link class="nav-link btn btn-sm btn-outline-info my-2 my-sm-0" to="/register"
         >Register</router-link
       >
     </div>
+    <!-- </div> -->
   </nav>
 </template>
 
