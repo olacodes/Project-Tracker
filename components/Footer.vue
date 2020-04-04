@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <div class="footer-container">
     <div class="manager-container">
       <img
         class="footer-logo"
@@ -8,27 +9,43 @@
       />
       <h2>Project Manager</h2>
     </div>
+    </div>
   </footer>
 </template>
 
 <style scoped>
+
+
+@media screen and (min-width: 700px){
+  .footer-container{
+    bottom: -380px !important;
+    left: 0;
+    right: 0;
+
+  }
+  
+}
+footer{
+  position: relative;
+}
 .manager-container {
   display: flex;
   place-items: center;
-  width: 300px;
+  width: 280px;
 }
 
-footer {
+.footer-container {
   display: grid;
   place-items: center;
   background-color: #00113d;
   color: #72f3ec;
   height: 180px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  /* margin-top: -50px; */
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  right: 0;
+  /* margin-top: 100px !important; */
 }
 .footer-logo {
   width: 120px;

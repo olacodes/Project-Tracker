@@ -1,4 +1,6 @@
 <template>
+  <div class="container">
+
   <div class="card-container card mt-5 shadow">
     <div class="login-header text-center p-3">
         <h2 class="login-text">Log in to Project Manager</h2>
@@ -15,10 +17,10 @@
           <label for="password">Password</label>
           <input type="text" class="form-control form-control-sm">
         </div>
-        <div class="buttons d-flex justify-content-between">
-          <button type="submit" class="btn btn-info w-50"> Login </button>
-          <div class="divider mx-4"></div>
-          <button class="btn btn-outline-info w-50"> sign up for manager </button>
+        <div class="buttons">
+          <button type="submit" class="btn btn-info login"> Login </button>
+          <div class="divider mx-4 my-4"></div>
+          <button class="btn btn-outline-info register"> sign up for manager </button>
         </div>
       </form>
 
@@ -31,7 +33,9 @@
           <div class="line"></div>
         </div>
       </div>
-      <button class="btn btn-primary mx-5 mb-5">Login with Facbook</button>
+      <button class="btn mx-5 mb-5 fb-btn">Login with Facbook</button>
+  </div>
+  
   </div>
 </template>
 
@@ -50,6 +54,16 @@ export default {
       width: 600px;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+  @media screen and (min-width: 400px){
+    .login, .register{
+      flex-grow: 1;
+      width: 40%;
+    }
+    .buttons{
+      display: flex
+      
     }
   }
   .card-container{
@@ -77,7 +91,8 @@ export default {
     text-align: center;
     margin-top: 12px;
   }
-  .buttons{
-
+  .fb-btn{
+    background-color: #72f3ec;
+    
   }
 </style>
