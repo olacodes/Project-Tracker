@@ -1,5 +1,12 @@
 export default {
   mode: 'universal',
+
+  generate: {
+    routes: [
+      '/login',
+      '/register'
+    ]
+  },
   /*
    ** Headers of the page
    */
