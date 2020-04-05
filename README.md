@@ -1,4 +1,4 @@
-# project-tracker
+# Project Manager
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cd879e4e-604a-49ea-9ebe-dd73b543b3cf/deploy-status)](https://app.netlify.com/sites/projects-manager/deploys)
 
