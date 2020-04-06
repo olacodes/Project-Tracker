@@ -1,4 +1,6 @@
 <template>
+  <div class="nav-wrapper">
+
   <nav
     class="navbar shadow-lg position-sticky fixed-top d-flex"
   >
@@ -22,6 +24,11 @@
     </div>
     <!-- </div> -->
   </nav>
+
+      <no-ssr>
+      <FlashMessage position='bottom right'/>
+    </no-ssr>
+  </div>
 </template>
 
 <style scoped>
