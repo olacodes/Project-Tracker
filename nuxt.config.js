@@ -34,7 +34,9 @@ css: ['bootstrap/dist/css/bootstrap.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src:'~/plugins/flash-message', mode: 'client' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
