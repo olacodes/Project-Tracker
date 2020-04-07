@@ -1,5 +1,7 @@
 # project-tracker
 
+[![CircleCI](https://circleci.com/gh/olacodes/project-manager.svg?style=svg)](https://projectsmanager.netlify.com)
+
 > my project tracker
 
 ## Build Setup
