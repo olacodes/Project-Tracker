@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cd879e4e-604a-49ea-9ebe-dd73b543b3cf/deploy-status)](https://app.netlify.com/sites/projects-manager/deploys)
 
+[![CircleCI](https://circleci.com/gh/olacodes/project-manager.svg?style=svg)](https://projectsmanager.netlify.com)
+
 > Project Manager
 
 ## Build Setup
