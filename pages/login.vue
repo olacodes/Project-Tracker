@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <clip-loader class="mt-5" :loading=loading  color="#00113d" size="60px"></clip-loader>
+
     <div class="card-container card mt-5 shadow">
       <div class="login-header text-center p-3">
         <h2 class="login-text">Log in to Project Manager</h2>
@@ -41,27 +43,33 @@
 
 <script>
 import { mapState } from 'vuex'
+import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
 
 export default {
+  components: {
+    ClipLoader
+  },
   data() {
     return {
       username: '',
-      password: ''
+      password: '',
+      loading: null
     }
   },
 
   methods: {
     async onSubmit() {
+      this.loading = 'loading'
       const username = this.username
       const password = this.password
       const payload = { username, password }
 
       let responseData = await this.$store.dispatch('auth/login/loginUser', payload)
-
-      console.log(responseData);
       
       let {status, message } = responseData
-      
+
+      this.loading=null
+
       if (status === 'success') {
         this.flashMessage.show({
           title: 'welcome back',
@@ -70,10 +78,10 @@ export default {
         })
         this.$router.push('/dashboard')
       }else{
-      this.flashMessage.show({
-      status,
-      message
-    });
+        this.flashMessage.show({
+        status,
+        message
+        });
       }
     }
   }

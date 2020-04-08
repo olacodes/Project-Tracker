@@ -9,10 +9,12 @@
             <h1 class="hero__header__text">
               The #1 project management tool for software development used by agile teams
             </h1>
-            
+            <div @click="preconnect">
             <nuxt-link to="/register">
               <Button background="#72f3ec" width="200px" class="my-4" color="#00113d">Sign Up - It's Free!</Button>
             </nuxt-link>
+
+            </div>
           </div>
 
           <div class="hero-image">
@@ -66,9 +68,12 @@
         <p class="get-started-para pb-3">
           Sign up and become one of the millions of people around the world using Trello to get more done.
         </p>
-        <nuxt-link to="/register">
-          <Button background="#72f3ec">Get Started - It's Free!</Button>
+        <div v-on:click="preconnect">
+        <nuxt-link to="/register" v-on:click="preconnect">
+          <Button background="#00113d" @click="preconnect">Get Started - It's Free!</Button>
         </nuxt-link>
+          
+        </div>
       </div>
 
       <div class="right-image">
@@ -87,6 +92,12 @@ export default {
   components: {
     Button
   },
+
+  methods: {
+    preconnect: function(e){
+      this.$axios.$get('/')
+    }
+  }
 
 }
 </script>

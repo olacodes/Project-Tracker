@@ -20,9 +20,9 @@ export const actions = {
     let payload
 
     try {
-      payload = await this.$axios.$post(`http://localhost:4000/api/v1/auth/login`, data)
+      payload = await this.$axios.$post(`/v1/auth/login/`, data)
 
-      if (payload.status == 'success') {
+      if (payload.status === 'success') {
         commit('SET_LOGIN_USER', payload)
         return payload
       }

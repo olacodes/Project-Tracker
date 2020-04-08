@@ -2,5 +2,5 @@ import Vue from 'vue';
 import VueFlashMessage from '@smartweb/vue-flash-message';
  
 Vue.use(VueFlashMessage, {
-    time: 1500
+    time: 3500
 });
