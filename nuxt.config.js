@@ -67,18 +67,20 @@ css: ['bootstrap/dist/css/bootstrap.css'],
    ** See https://axios.nuxtjs.org/options
    */
   // axios: {},
+  proxy: {
+    '/api': {
+      target: 'https://project-managers.herokuapp.com/api',
+      pathRewrite: {
+        '^/api' : '/'
+      }
+    }
+  },
 
   axios: {
     baseURL: '/api',
     credentials: true,
   },
 
-  proxy:[
-    
-    'https://project-managers.herokuapp.com/api',
-    'https://project-managers.herokuapp.com/api/*/**.json',
-    ['https://project-managers.herokuapp.com/api', {ws: false}]
-  ],
   /*
    ** Build configuration
    */

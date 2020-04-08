@@ -35,7 +35,7 @@
 export default {
   methods:{
     preconnect(){
-      this.$axios.$get('/')
+      this.$axios.$get('/v1')
     }
   }
 }
