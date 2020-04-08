@@ -20,7 +20,7 @@ export const actions = {
     let payload
 
     try {
-      payload = await this.$axios.$post(`/v1/auth/login/`, data)
+      payload = await this.$axios.$post(`https://project-managers.herokuapp.com/api/v1/auth/login/`, data)
 
       if (payload.status === 'success') {
         commit('SET_LOGIN_USER', payload)

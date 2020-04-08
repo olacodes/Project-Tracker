@@ -18,7 +18,7 @@ export const actions = {
   async registerUser({ commit }, data) {
     let payload
     try {
-      payload = await this.$axios.$post(`/v1/auth/register/`, data)
+      payload = await this.$axios.$post(`https://project-managers.herokuapp.com/api/v1/auth/register/`, data)
 
       if (payload.status === 'success') {
         commit('SET_USER_SUCCESS', data)
