@@ -1,5 +1,5 @@
 export default {
-  mode: 'universal',
+  mode: 'spa',
 
   generate: {
     routes: [
@@ -21,7 +21,11 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "dns-prefetch", href: "https://project-managers.herokuapp.com/api/v1/users"},
+      { rel: "preconnect", href: "https://project-managers.herokuapp.com/api/v1/users"},
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -52,13 +56,29 @@ css: ['bootstrap/dist/css/bootstrap.css'],
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+
+    // Simple usage
+    '@nuxtjs/proxy',
+
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  // axios: {},
+
+  axios: {
+    baseURL: '/api',
+    credentials: true,
+  },
+
+  proxy:[
+    
+    'https://project-managers.herokuapp.com/api',
+    'https://project-managers.herokuapp.com/api/*/**.json',
+    ['https://project-managers.herokuapp.com/api', {ws: false}]
+  ],
   /*
    ** Build configuration
    */

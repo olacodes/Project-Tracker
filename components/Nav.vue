@@ -2,7 +2,7 @@
   <div class="nav-wrapper">
 
   <nav
-    class="navbar shadow-lg position-sticky fixed-top d-flex"
+    class="navbar shadow-lg position-sticky fixed-top d-flex" @click="preconnect"
   >
     <router-link class="navbar-brand link" to="/">
       <img
@@ -25,11 +25,21 @@
     <!-- </div> -->
   </nav>
 
-      <no-ssr>
+      <client-only>
       <FlashMessage position='bottom right'/>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
+
+<script>
+export default {
+  methods:{
+    preconnect(){
+      this.$axios.$get('/')
+    }
+  }
+}
+</script>
 
 <style scoped>
 .nav-link,
