@@ -35,7 +35,7 @@
 export default {
   methods:{
     preconnect(){
-      this.$axios.$get('/v1')
+      this.$axios.$get('https://project-managers.herokuapp.com/api/')
     }
   }
 }
