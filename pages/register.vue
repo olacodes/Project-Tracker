@@ -80,7 +80,7 @@ export default {
       this.loading=null
       if (status === 'success') {
         this.flashMessage.show({
-          title: 'Welcome to you dashboad',
+          title: 'Welcome to your dashboad',
           status,
           message
         })

@@ -10,7 +10,7 @@
 
       <form @submit.prevent="onSubmit" class="mx-5">
         <div class="form-group">
-          <label for="Username or Email">Username or Email</label>
+          <label for="Username">Username </label>
           <input type="text" v-model="username" class="form-control form-control-sm" />
         </div>
 

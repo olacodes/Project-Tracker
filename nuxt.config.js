@@ -34,7 +34,10 @@ export default {
   /*
    ** Global CSS
    */
-css: ['bootstrap/dist/css/bootstrap.css'],
+css: ['~assets/scss/main.scss', 'bootstrap/dist/css/bootstrap.css'],
+styleResources: {
+  scss: ['~assets/scss/main.scss']
+},
   /*
    ** Plugins to load before mounting the App
    */
@@ -52,6 +55,7 @@ css: ['bootstrap/dist/css/bootstrap.css'],
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/style-resources',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
