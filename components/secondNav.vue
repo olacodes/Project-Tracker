@@ -33,14 +33,10 @@ export default {
 </script>
 
 <style scoped>
-.second-nav-container{
-    background-color: white;
-}
-    /* .second-nav{
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 900px;
-    } */
+    .second-nav-container{
+        background-color: white;
+    }
+
     .project {
         border-bottom: 3px solid #72f3ec;
         vertical-align: baseline;

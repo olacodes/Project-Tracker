@@ -1,6 +1,6 @@
 <template>
   <div class="card-wrapper has-background-white">
-      <div class="mt-5 d-md-flex shadow justify-content-between text-justify p-4">
+      <div class=" d-md-flex shadow justify-content-between text-justify p-4">
           <div class="image-card pt-2">
               <img class="text-align-center img-card bg-dark" src="https://res.cloudinary.com/olacode/image/upload/v1586537121/project%20manager/project-manager14_cy2wbc.webp" alt="">
           </div>
@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
     .image-card{
         max-width: 220px;
         margin-left: auto;

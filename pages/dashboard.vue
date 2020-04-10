@@ -2,8 +2,9 @@
   <div class="wrapper">
     <SecondNav />
     <div class="container">
+      <ImageCard class="my-5"/>
+      <SearchBar/>
 
-    <ImageCard />
     </div>
     <h1>Wecome to the  Dashboard
     </h1>
@@ -13,10 +14,12 @@
 <script>
 import SecondNav from '../components/secondNav'
 import ImageCard from '../components/ImageCard'
+import SearchBar from '../components/SearchBar'
 export default {
   components: {
     SecondNav,
-    ImageCard
+    ImageCard,
+    SearchBar
   }
 }
 </script>
@@ -24,5 +27,8 @@ export default {
 <style>
   .wrapper{
     background-color: #eee;
+  }
+  .imageCard{
+    margin: 50px 0;
   }
 </style>
