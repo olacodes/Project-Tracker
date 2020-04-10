@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <clip-loader class="mt-5" :loading=loading  color="#00113d" size="60px"></clip-loader>
-    <div class="card-container card mt-5 shadow">
+    <div class="card-container card my-5 shadow">
       <div class="login-header text-center p-3">
         <h2 class="login-text">Sign up for Project Manager</h2>
       </div>
@@ -46,7 +46,7 @@
           <div class="line"></div>
         </div>
       </div>
-      <button class="btn btn-primary mx-5 mb-5">Sign up with Facbook</button>
+      <button class="btn btn-primary mx-5 mb-5">Sign up with Facebook</button>
     </div>
   </div>
 </template>
@@ -80,7 +80,7 @@ export default {
       this.loading=null
       if (status === 'success') {
         this.flashMessage.show({
-          title: 'Welcome to you dashboad',
+          title: 'Welcome to your dashboad',
           status,
           message
         })

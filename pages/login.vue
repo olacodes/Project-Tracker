@@ -2,7 +2,7 @@
   <div class="container">
     <clip-loader class="mt-5" :loading=loading  color="#00113d" size="60px"></clip-loader>
 
-    <div class="card-container card mt-5 shadow">
+    <div class="card-container card my-5 shadow">
       <div class="login-header text-center p-3">
         <h2 class="login-text">Log in to Project Manager</h2>
       </div>
@@ -10,7 +10,7 @@
 
       <form @submit.prevent="onSubmit" class="mx-5">
         <div class="form-group">
-          <label for="Username or Email">Username or Email</label>
+          <label for="Username">Username </label>
           <input type="text" v-model="username" class="form-control form-control-sm" />
         </div>
 
@@ -36,7 +36,7 @@
           <div class="line"></div>
         </div>
       </div>
-      <button class="btn mx-5 mb-5 fb-btn">Login with Facbook</button>
+      <button class="btn mx-5 mb-5 fb-btn">Login with Facebook</button>
     </div>
   </div>
 </template>

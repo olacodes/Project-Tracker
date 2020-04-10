@@ -23,9 +23,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: "dns-prefetch", href: "https://project-managers.herokuapp.com/api/v1/users"},
-      { rel: "preconnect", href: "https://project-managers.herokuapp.com/api/v1/users"},
-    ]
+    ],
+    script: [
+      { src: "https://use.fontawesome.com/releases/v5.3.1/js/all.js" }
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -34,7 +35,10 @@ export default {
   /*
    ** Global CSS
    */
-css: ['bootstrap/dist/css/bootstrap.css'],
+css: ['~assets/scss/main.scss', 'bootstrap/dist/css/bootstrap.css'],
+styleResources: {
+  scss: ['~assets/scss/main.scss']
+},
   /*
    ** Plugins to load before mounting the App
    */
@@ -52,6 +56,7 @@ css: ['bootstrap/dist/css/bootstrap.css'],
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/style-resources',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
