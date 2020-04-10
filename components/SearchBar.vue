@@ -1,6 +1,6 @@
 <template>
-  <div class="search-wrapper d-flex justify-content-between p-0 m-0">
-      <div class=" input-wrapper shadow">
+  <div class="search-wrapper d-flex justify-content-between">
+      <div class=" input-wrapper card">
         <input class="input-element" type="text" placeholder="Search Projects">
       </div>
         <div class=" button-wrapper">
@@ -21,6 +21,8 @@ export default {
     width: 100%;
     margin-right: 2.5%;
     vertical-align: baseline;
+    border-radius: 5px;
+
 
 }
 .input-element{
@@ -28,6 +30,8 @@ export default {
     padding: 8px;
     border: none;
     vertical-align: baseline;
+    border-radius: 5px;
+
 }
 
 </style>

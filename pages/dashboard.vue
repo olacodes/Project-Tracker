@@ -1,13 +1,11 @@
 <template>
   <div class="wrapper">
     <SecondNav />
-    <div class="container">
+    <div class="container mb-5">
       <ImageCard class="my-5"/>
-      <SearchBar/>
-
+      <SearchBar class="my-5"/>
+      <ProjectCard class="my-5"/>
     </div>
-    <h1>Wecome to the  Dashboard
-    </h1>
   </div>
 </template>
 
@@ -15,11 +13,13 @@
 import SecondNav from '../components/secondNav'
 import ImageCard from '../components/ImageCard'
 import SearchBar from '../components/SearchBar'
+import ProjectCard from '../components/ProjectCard'
 export default {
   components: {
     SecondNav,
     ImageCard,
-    SearchBar
+    SearchBar,
+    ProjectCard
   }
 }
 </script>

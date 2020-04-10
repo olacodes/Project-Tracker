@@ -1,6 +1,6 @@
 <template>
-  <footer>
-    <div class="footer-container">
+  <footer class="">
+    <div class="footer-container py-4">
     <div class="manager-container">
       <img
         class="footer-logo"
@@ -15,19 +15,6 @@
 
 <style scoped>
 
-
-@media screen and (min-width: 700px){
-  .footer-container{
-    bottom: -380px !important;
-    left: 0;
-    right: 0;
-
-  }
-  
-}
-footer{
-  position: relative;
-}
 .manager-container {
   display: flex;
   place-items: center;
@@ -39,13 +26,8 @@ footer{
   place-items: center;
   background-color: #00113d;
   color: #72f3ec;
-  height: 180px;
+  /* height: 180px; */
   width: 100%;
-  position: absolute;
-  bottom: -200px;
-  left: 0;
-  right: 0;
-  /* margin-top: 100px !important; */
 }
 .footer-logo {
   width: 120px;
