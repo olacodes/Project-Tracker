@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container pb-5">
     <clip-loader class="mt-5" :loading=loading  color="#00113d" size="60px"></clip-loader>
     <div class="card-container card my-5 shadow">
       <div class="login-header text-center p-3">
