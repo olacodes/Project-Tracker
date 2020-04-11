@@ -16,8 +16,8 @@
             
         </div>
         
-        <div>
-            <button class="navbar-item button is-primary">
+        <div @click="$emit('openModal')">
+            <button class="navbar-item button is-primary" >
             create project
             </button>
         </div>

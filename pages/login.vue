@@ -1,8 +1,9 @@
 <template>
-  <div class="container">
-    <clip-loader class="mt-5" :loading=loading  color="#00113d" size="60px"></clip-loader>
+  <div class="container pb-5">
+    <clip-loader class="mt-5" :loading="loading" color="#00113d" size="60px"></clip-loader>
 
     <div class="card-container card my-5 shadow">
+      <FlashMessage />
       <div class="login-header text-center p-3">
         <h2 class="login-text">Log in to Project Manager</h2>
       </div>
@@ -65,23 +66,40 @@ export default {
       const payload = { username, password }
 
       let responseData = await this.$store.dispatch('auth/login/loginUser', payload)
-      
-      let {status, message } = responseData
 
-      this.loading=null
+      let { status, message } = responseData
+
+      this.loading = null
 
       if (status === 'success') {
         this.flashMessage.show({
           title: 'welcome back',
           status,
-          message
+          message,
+          icon:
+            'https://res.cloudinary.com/olacode/image/upload/v1586618462/project%20manager/success-icon_b7m2vu.webp',
+          clickable: true,
+          blockClass: 'flash-message-class',
+          positon: 'right top',
+          x: 50,
+          y: 600
         })
-        this.$router.push('/dashboard')
-      }else{
+        setTimeout(() => {
+          this.$router.push('/dashboard')
+        }, 3000);
+      } else {
         this.flashMessage.show({
-        status,
-        message
-        });
+          title: status,
+          status,
+          message,
+          icon:
+            'https://res.cloudinary.com/olacode/image/upload/v1586073406/project%20manager/error_qcaxmt.png',
+          clickable: true,
+          blockClass: 'flash-message-class',
+          positon: 'right top',
+          x: 50,
+          y: 600
+        })
       }
     }
   }
@@ -91,6 +109,11 @@ export default {
 <style scoped>
 /* deep__blue #00113d */
 /* light cyan ##72f3ec */
+.flash-message-class {
+  width: 280px !important;
+  /* height: 50px; */
+}
+
 @media screen and (min-width: 600px) {
   .card-container {
     width: 600px;
@@ -109,6 +132,7 @@ export default {
   }
 }
 .card-container {
+  position: relative;
   color: #00113d;
 }
 .login-header {
