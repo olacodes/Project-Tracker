@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <SecondNav />
+    <SecondNav @openModal="toggleModal"/>
     <div class="container mb-5">
-      <ProjectModal />
+      <ProjectModal @closeModal="toggleModal" @projectData="handleProjectData" v-show="showModal"/>
       <ImageCard class="my-5"/>
       <SearchBar class="my-5"/>
       <ProjectCard class="my-5"/>
@@ -24,7 +24,41 @@ export default {
     ImageCard,
     SearchBar,
     ProjectCard,
-    ProjectModal
+    ProjectModal,
+  },
+  data(){
+    return {
+      showModal: false
+    }
+  },
+  methods: {
+    toggleModal () {
+      return this.showModal = !this.showModal
+    },
+    async handleProjectData(projectData){
+      const {projectName} = projectData
+      if (!projectName){
+         this.flashMessage.show({
+          title: 'Error',
+          status: 'error',
+          message: 'Project name cannot be empty',
+          icon:'https://res.cloudinary.com/olacode/image/upload/v1586073406/project%20manager/error_qcaxmt.png',
+          clickable: true,
+          blockClass: 'flash-message-class',
+          positon: 'right top',
+          x: 100,
+          y: 50
+          
+        })
+      }
+      else{
+
+        
+      }
+
+      console.log(projectData);
+      
+    }
   }
 }
 </script>
@@ -35,5 +69,9 @@ export default {
   }
   .imageCard{
     margin: 50px 0;
+  }
+  .flash-message-class{
+    width: 350px;
+    /* height: 50px; */
   }
 </style>

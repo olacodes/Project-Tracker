@@ -24,10 +24,6 @@
     </div>
     <!-- </div> -->
   </nav>
-
-      <client-only>
-      <FlashMessage position='bottom right'/>
-    </client-only>
   </div>
 </template>
 

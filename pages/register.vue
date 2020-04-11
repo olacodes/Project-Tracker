@@ -1,7 +1,9 @@
 <template>
   <div class="container pb-5">
-    <clip-loader class="mt-5" :loading=loading  color="#00113d" size="60px"></clip-loader>
+    <clip-loader class="mt-5" :loading="loading" color="#00113d" size="60px"></clip-loader>
     <div class="card-container card my-5 shadow">
+      <FlashMessage />
+
       <div class="login-header text-center p-3">
         <h2 class="login-text">Sign up for Project Manager</h2>
       </div>
@@ -58,13 +60,12 @@ export default {
     ClipLoader
   },
 
-
   data() {
     return {
       username: '',
       email: '',
       password: '',
-      loading: null,
+      loading: null
     }
   },
   methods: {
@@ -77,18 +78,35 @@ export default {
 
       let { status, message } = responseData
 
-      this.loading=null
+      this.loading = null
       if (status === 'success') {
         this.flashMessage.show({
-          title: 'Welcome to your dashboad',
+          title: 'welcome back',
           status,
-          message
+          message,
+          icon:
+            'https://res.cloudinary.com/olacode/image/upload/v1586618462/project%20manager/success-icon_b7m2vu.webp',
+          clickable: true,
+          blockClass: 'flash-message-class',
+          positon: 'right top',
+          x: 50,
+          y: 600
         })
-        this.$router.push('/dashboard')
+        setTimeout(() => {
+          this.$router.push('/dashboard')
+        }, 3000)
       } else {
         this.flashMessage.show({
+          title: status,
           status,
-          message
+          message,
+          icon:
+            'https://res.cloudinary.com/olacode/image/upload/v1586073406/project%20manager/error_qcaxmt.png',
+          clickable: true,
+          blockClass: 'flash-message-class',
+          positon: 'right top',
+          x: 50,
+          y: 600
         })
       }
     }
