@@ -74,7 +74,7 @@ export default {
       const { username, email, password } = this
       const payload = { username, email, password }
 
-      let responseData = await this.$store.dispatch('auth/register/registerUser', payload)
+      let responseData = await this.$store.dispatch('auth/register', payload)
 
       let { status, message } = responseData
 
