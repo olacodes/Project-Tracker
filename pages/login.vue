@@ -65,7 +65,7 @@ export default {
       const password = this.password
       const payload = { username, password }
 
-      let responseData = await this.$store.dispatch('auth/login/loginUser', payload)
+      let responseData = await this.$store.dispatch('auth/login', payload)
 
       let { status, message } = responseData
 
