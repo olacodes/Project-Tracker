@@ -108,6 +108,9 @@ export default {
   components: {
     Button
   },
+  created() {
+    this.$axios.$get('https://project-managers.herokuapp.com/api/')
+  },
 
   methods: {
     preconnect: function(e) {

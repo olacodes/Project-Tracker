@@ -1,4 +1,5 @@
 const BASE_URL = `https://project-managers.herokuapp.com/api/V1`
+// const BASE_URL = `http://localhost:8000/api/V1`
 
 export const state = () => ({
   isAuthenticated: false,
