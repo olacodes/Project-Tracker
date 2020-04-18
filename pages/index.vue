@@ -19,7 +19,7 @@
           <div class="hero-image">
             <img
               class="img"
-              src="https://res.cloudinary.com/olacode/image/upload/v1585938105/project%20manager/project-manager7_dpphnc.png"
+              src="https://res.cloudinary.com/olacode/image/upload/v1585938105/project%20manager/project-manager7_dpphnc.webp"
               alt="hero-image"
             />
           </div>
@@ -41,7 +41,7 @@
         <div class="workflow-image hero-image">
           <img
             class="img"
-            src="https://res.cloudinary.com/olacode/image/upload/c_scale,w_700/v1585944268/project%20manager/project-manager11_thynq5.png"
+            src="https://res.cloudinary.com/olacode/image/upload/c_scale,w_700/v1585944268/project%20manager/project-manager11_thynq5.webp"
             alt=""
           />
         </div>
@@ -70,7 +70,7 @@
       <div class="left-image">
         <img
           class="get-started-img"
-          src="https://res.cloudinary.com/olacode/image/upload/c_scale,w_400/v1585958818/project%20manager/project-manager-13_qzyfnk.png"
+          src="https://res.cloudinary.com/olacode/image/upload/c_scale,w_400/v1585958818/project%20manager/project-manager-13_qzyfnk.webp"
           alt=""
         />
       </div>
@@ -93,7 +93,7 @@
       <div class="right-image">
         <img
           class="get-started-img"
-          src="https://res.cloudinary.com/olacode/image/upload/c_scale,w_700/v1585944268/project%20manager/project-manager11_thynq5.png"
+          src="https://res.cloudinary.com/olacode/image/upload/c_scale,w_700/v1585944268/project%20manager/project-manager11_thynq5.webp"
           alt=""
         />
       </div>
