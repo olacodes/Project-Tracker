@@ -94,5 +94,8 @@ styleResources: {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  env:{
+    JWT_SECRET: process.env.JWT_SECRET || 'thisshouldbealongkey-because-they_said_it_isase)key'
   }
 }

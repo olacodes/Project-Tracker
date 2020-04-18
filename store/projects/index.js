@@ -17,7 +17,7 @@ export const getters = {
         return state.projects.data[0].project
       }
     } catch (error) {
-      console.log(error)
+      return error
     }
   }
 
@@ -54,8 +54,6 @@ export const actions = {
     let project
     try {
       project = await this.$axios.$post(`${BASE_URL}/project`, data)
-      console.log(project)
-
       commit('ADDPROJECT', project)
       return project
     } catch (error) {
