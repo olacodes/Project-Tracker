@@ -5,7 +5,7 @@
         <router-link class="navbar-brand link" to="/">
           <img
             class="nav-logo"
-            src="https://res.cloudinary.com/olacode/image/upload/v1585867972/project%20manager/project-logo3_wl6fmi.png"
+            src="https://res.cloudinary.com/olacode/image/upload/c_scale,w_100/v1585867972/project%20manager/project-logo3_wl6fmi.webp"
             alt="logo"
           />
           Manager
