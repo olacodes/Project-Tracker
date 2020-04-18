@@ -1,19 +1,24 @@
 <template>
   <div class="nav-wrapper">
-    <nav class="navbar shadow-lg position-sticky fixed-top d-flex" @click="preconnect">
-      <router-link class="navbar-brand link" to="/">
-        <img
-          class="nav-logo"
-          src="https://res.cloudinary.com/olacode/image/upload/v1585867972/project%20manager/project-logo3_wl6fmi.png"
-          alt="logo"
-        />
-        Manager
-      </router-link>
+    <nav class="navbar shadow-lg position-sticky fixed-top d-flex">
+      <div class="left-nav-link d-flex">
+        <router-link class="navbar-brand link" to="/">
+          <img
+            class="nav-logo"
+            src="https://res.cloudinary.com/olacode/image/upload/v1585867972/project%20manager/project-logo3_wl6fmi.png"
+            alt="logo"
+          />
+          Manager
+        </router-link>
+        <div v-if="isLoggedIn">
+          <nuxt-link class="nav-link  my-2" to="/dashboard">Dashboard</nuxt-link>
+        </div>
+      </div>
 
       <div class="login-register d-flex justify-content-between">
         <div class="" v-if="isLoggedIn" @click="logOut">
           <router-link class="nav-link btn btn-sm md-btn-lg  my-2 my-sm-0" to="/"
-            >Logout</router-link
+            >Logout </router-link
           >
         </div>
         <div v-else class="d-flex">
@@ -42,10 +47,6 @@ export default {
     logOut() {
       this.logout()
     },
-
-    preconnect() {
-      this.$axios.$get('https://project-managers.herokuapp.com/api/')
-    }
   }
 }
 </script>

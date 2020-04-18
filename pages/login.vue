@@ -86,7 +86,7 @@ export default {
         })
         setTimeout(() => {
           this.$router.push('/dashboard')
-        }, 3000);
+        }, 1000);
       } else {
         this.flashMessage.show({
           title: status,

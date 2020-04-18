@@ -43,7 +43,7 @@ export default {
     const DECODE_JWT = jwt.verify(this.getToken, this.JWT_SECRET)
     const userId = DECODE_JWT.id
     this.userId = userId
-    this.fetchUserProject(userId * 1)
+    this.fetchUserProject(userId * 1)    
   },
   methods: {
     ...mapActions('projects', ['fetchUserProject']),
@@ -88,7 +88,8 @@ export default {
         })
       }
     }
-  }
+  },
+  // middleware: 'authenticated'
 }
 </script>
 

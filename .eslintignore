@@ -3,3 +3,5 @@
 /layouts/**
 /store/**
 /plugins/**
+/lib/**
+/middleware/**

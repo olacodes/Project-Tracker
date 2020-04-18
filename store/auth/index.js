@@ -2,13 +2,12 @@ const BASE_URL = `https://project-managers.herokuapp.com/api/V1`
 // const BASE_URL = `http://localhost:8000/api/V1`
 
 export const state = () => ({
-  isAuthenticated: false,
-  token: null
+  token: window.localStorage.getItem('token')
 })
 
 export const getters = {
   getToken: (state) => state.token,
-  isLoggedIn: (state) => state.isAuthenticated
+  isLoggedIn: (state) => !!state.token
 }
 
 /**
@@ -19,9 +18,6 @@ export const mutations = {
     return (state.token = token)
   },
 
-  SETISAUTHENTICATED(state, value) {
-    return (state.isAuthenticated = value)
-  }
 }
 
 /**
@@ -33,8 +29,8 @@ export const actions = {
     try {
       payload = await this.$axios.$post(`${BASE_URL}/auth/login`, data)
       if (payload.status === 'success') {
-        commit('SETISAUTHENTICATED', true)
         commit('SETTOKEN', payload.data.token)
+        window.localStorage.setItem('token', payload.data.token)
 
         return payload
       }
@@ -49,9 +45,8 @@ export const actions = {
     try {
       payload = await this.$axios.$post(`${BASE_URL}/auth/register`, data)
       if (payload.status === 'success') {
-        commit('SETISAUTHENTICATED', true)
         commit('SETTOKEN', payload.data.token)
-
+        window.localStorage.setItem('token', payload.data.token)
         return payload
       }
     } catch (error) {
@@ -61,8 +56,8 @@ export const actions = {
   },
 
   logout({ commit }) {
-    commit('SETISAUTHENTICATED', false)
     commit('SETTOKEN', null)
+    window.localStorage.removeItem('token')
     return 'success'
   }
 }
