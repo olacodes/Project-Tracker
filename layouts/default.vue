@@ -19,9 +19,9 @@ export default {
 
 <style>
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1536px) {
   .wrapper{
-    max-width: 1400px;
+    max-width: 1536px;
     margin-right: auto;
     margin-left: auto;
   }
