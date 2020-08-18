@@ -80,7 +80,7 @@
           Start Planning Today
         </h2>
         <p class="get-started-para pb-3">
-          Sign up and become one of the millions of people around the world using Trello to get more
+          Sign up and become one of the millions of people around the world using Manager to get more
           done.
         </p>
         <div v-on:click="preconnect">

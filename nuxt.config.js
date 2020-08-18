@@ -2,10 +2,7 @@ export default {
   mode: 'spa',
 
   generate: {
-    routes: [
-      '/login',
-      '/register'
-    ]
+    routes: ['/login', '/register']
   },
   /*
    ** Headers of the page
@@ -21,9 +18,7 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color
@@ -32,22 +27,20 @@ export default {
   /*
    ** Global CSS
    */
-css: ['~assets/scss/main.scss', 'bootstrap/dist/css/bootstrap.css'],
-styleResources: {
-  scss: ['~assets/scss/main.scss']
-},
+  css: ['~assets/scss/main.scss', 'bootstrap/dist/css/bootstrap.css'],
+  styleResources: {
+    scss: ['~assets/scss/main.scss']
+  },
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    { src:'~/plugins/flash-message', mode: 'client' }
-  ],
+  plugins: [{ src: '~/plugins/flash-message', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
   /*
    ** Nuxt.js modules
@@ -61,8 +54,7 @@ styleResources: {
     '@nuxtjs/dotenv',
 
     // Simple usage
-    '@nuxtjs/proxy',
-
+    '@nuxtjs/proxy'
   ],
   /*
    ** Axios module configuration
@@ -73,14 +65,14 @@ styleResources: {
     '/api': {
       target: 'https://project-managers.herokuapp.com/api',
       pathRewrite: {
-        '^/api' : '/'
+        '^/api': '/'
       }
     }
   },
 
   axios: {
     baseURL: '/api',
-    credentials: true,
+    credentials: true
   },
 
   /*
@@ -92,7 +84,7 @@ styleResources: {
      */
     extend(config, ctx) {}
   },
-  env:{
+  env: {
     JWT_SECRET: process.env.JWT_SECRET || 'thisshouldbealongkey-because-they_said_it_isase)key'
   }
 }
